@@ -33,8 +33,8 @@ const App = () => {
      
       <SearchBar query={query} setQuery={setQuery} recipes={recipes} setSelectedRecipe={setSelectedRecipe} />
       {selectedRecipe && <RecipeDetails recipe={selectedRecipe} />}
-      {loading && <p></p>}
-      {!loading && query && recipes.length === 0 && <p>No recipes found.</p>}
+      {loading && <p className="text-center text-white">Loding...</p>}
+      {!loading && query && recipes.length === 0 && <p className="text-center text-white">No recipes found.</p>}
     </div>
   );
 };

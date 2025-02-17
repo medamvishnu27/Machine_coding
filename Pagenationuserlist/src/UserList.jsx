@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserCard from "./UserCards";
 
-
 const UserList = () => {
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,7 +21,7 @@ const UserList = () => {
 
   return (
     <div>
-      <h2 style={{ textAlign: "center", marginTop: "170px" ,color:"white",fontSize:"50px"}}> User Details</h2>
+      <h2 style={{ textAlign: "center", marginTop: "170px", color: "white", fontSize: "50px" }}> User Details</h2>
 
       {/* Card Container */}
       <div className="card-container">
@@ -33,22 +32,37 @@ const UserList = () => {
 
       {/* Pagination Controls */}
       <div style={{ textAlign: "center", marginTop: "30px" }}>
-        <button  className="previous-btn" onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
+        <button className="previous-btn" onClick={() => setCurrentPage(currentPage - 1)} disabled={currentPage === 1}>
           Previous
         </button>
 
-        {Array.from({ length: totalPages }, (_, i) => (
-          <button
-            key={i + 1}
-            onClick={() => setCurrentPage(i + 1)}
-            style={{
-              fontWeight: currentPage === i + 1 ? "bolder" : "Normal",
-              margin: "5px 5px",backgroundColor:"white"
-            }}
-          >
-            {i + 1}
-          </button>
-        ))}
+        {(() => {
+          const pageNumbers = [];
+          const maxVisiblePages = 3;
+          const startPage = Math.max(1, currentPage - 1);
+          const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+          for (let i = startPage; i <= endPage; i++) {
+            pageNumbers.push(i);
+          }
+
+          return (
+            <>
+              {pageNumbers.map((number) => (
+                <button
+                  key={number}
+                  onClick={() => setCurrentPage(number)}
+                  style={{
+                    fontWeight: currentPage === number ? "bolder" : "Normal",
+                    margin: "5px 5px", backgroundColor: "white"
+                  }}
+                >
+                  {number}
+                </button>
+              ))}
+            </>
+          );
+        })()}
 
         <button className="next-btn" onClick={() => setCurrentPage(currentPage + 1)} disabled={currentPage === totalPages}>
           Next
@@ -56,7 +70,6 @@ const UserList = () => {
       </div>
 
       {/* Show Current Page */}
-      
     </div>
   );
 };

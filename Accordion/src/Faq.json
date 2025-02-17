@@ -1,0 +1,111 @@
+{
+    "FAQ":[
+        {
+            "id": 1,
+            "question": "What is React?",
+            "answer": "React is an open-source JavaScript library for building user interfaces, especially for single-page applications. It allows developers to create reusable UI components."
+          },
+          {
+            "id": 2,
+            "question": "What are React Hooks?",
+            "answer": "React Hooks are functions that allow functional components to use state and other React features without writing a class. Examples include useState, useEffect, useContext, etc."
+          },
+          {
+            "id": 3,
+            "question": "What is useState in React?",
+            "answer": "useState is a Hook that lets you add state to a functional component. It returns an array with the current state value and a function to update it."
+          },
+          {
+            "id": 4,
+            "question": "What is useEffect in React?",
+            "answer": "useEffect is a Hook used for performing s ide effects in function components, such as fetching data, subscribing to events, or manually changing the DOM."
+          },
+          {
+            "id": 5,
+            "question": "What is the Virtual DOM?",
+            "answer": "The Virtual DOM is a lightweight copy of the actual DOM. React uses it to optimize UI updates by comparing changes and updating only the necessary parts."
+          },
+          {
+            "id": 6,
+            "question": "What is JSX?",
+            "answer": "JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows writing HTML-like code inside JavaScript files."
+          },
+          {
+            "id": 7,
+            "question": "What is React Router?",
+            "answer": "React Router is a library for handling navigation in React applications. It allows users to switch between different pages without refreshing the entire page."
+          },
+          {
+            "id": 8,
+            "question": "What is Redux in React?",
+            "answer": "Redux is a state management library that helps manage the global state of an application. It uses actions, reducers, and a store to handle state changes."
+          },
+          {
+            "id": 9,
+            "question": "What is the difference between Props and State?",
+            "answer": "Props are used to pass data from a parent component to a child component, whereas state is used to manage data within a component."
+          },
+          {
+            "id": 10,
+            "question": "What are controlled and uncontrolled components?",
+            "answer": "Controlled components have their form data controlled by React state, while uncontrolled components rely on the DOM to manage form data."
+          },
+          {
+            "id": 11,
+            "question": "What is the use of useContext?",
+            "answer": "useContext is a Hook that allows components to access global data without prop drilling. It helps share state across multiple components efficiently."
+          },
+          {
+            "id": 12,
+            "question": "What are React Fragments?",
+            "answer": "React Fragments allow grouping multiple elements without adding extra DOM nodes. It helps keep the DOM structure clean and efficient."
+          },
+          {
+            "id": 13,
+            "question": "What is React.memo?",
+            "answer": "React.memo is a higher-order component that optimizes functional components by preventing unnecessary re-renders if props remain the same."
+          },
+          {
+            "id": 14,
+            "question": "What is lazy loading in React?",
+            "answer": "Lazy loading is a technique in React where components are loaded only when they are needed, improving performance. React.lazy() is used for this."
+          },
+          {
+            "id": 15,
+            "question": "What is the difference between useCallback and useMemo?",
+            "answer": "useCallback memoizes functions to prevent unnecessary re-creation, while useMemo memoizes computed values to avo id unnecessary calculations."
+          },
+          {
+            "id": 16,
+            "question": "How do you handle errors in React?",
+            "answer": "Errors in React can be handled using try-catch, error boundaries (componentD id ,Catch, getDerivedStateFromError), or libraries like React Error Boundary."
+          },
+          {
+            "id": 17,
+            "question": "What is Prop Drilling in React?",
+            "answer": "Prop Drilling occurs when props are passed down multiple levels to child components, even if intermediate components do not need them. It can be avo id ed using Context API or Redux."
+          },
+          {
+            "id": 18,
+            "question": "How do you optimize performance in React applications?",
+            "answer": "Performance optimization techniques include React.memo, useCallback, useMemo, lazy loading, code splitting, and avo id ing unnecessary re-renders."
+          },
+          {
+            "id": 19,
+            "question": "What is Server-S ide Rendering (SSR) in React?",
+            "answer": "SSR is a technique where the React application is rendered on the server before sending it to the browser, improving SEO and initial load time."
+          },
+          {
+            "id": 20,
+            "question": "What is hydration in React?",
+            "answer": "Hydration is the process of attaching event handlers to the pre-rendered HTML on the client s id e in a Server-S id e Rendered (SSR) React application."
+          }
+    ]
+}
+
+
+
+
+
+
+
