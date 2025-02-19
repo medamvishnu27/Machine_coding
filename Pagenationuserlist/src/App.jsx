@@ -1,13 +1,17 @@
-import React from 'react'
-import UserList from './UserList'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import UserList from './UserList';
+import UserDetail from './UserDetail';
 
 const App = () => {
   return (
-    <>
-    
-    <UserList />
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<UserList />} />
+        <Route path="/user/:userId" element={<UserDetail />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
